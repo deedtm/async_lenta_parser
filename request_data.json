@@ -1,0 +1,20 @@
+{
+	"cookies": {
+		"ASP.NET_SessionId": "jd3iggwcsms3rn2w3vd124hf",
+		"qrator_jsid": "1704392431.063.ZfgrK7Xs8okg3i5f-si21v5rdtji268mljivvdnbgld21pqbn",
+		"ValidationToken": "9ea8db299326e056acc801c250cdfb95"
+	},
+	"headers": {
+		"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
+		"Content-Type": "application/json",
+		"Origin": "https://lenta.com",
+		"Connection": "close"
+	},
+	"stores": {
+		"url": "https://lenta.com/api/v1/stores/"
+	},
+	"skus": {
+		"url": "https://lenta.com/api/v1/skus/list",
+		"data": "{\"nodeCode\":\"{node_code}\",\"filters\":[],\"typeSearch\":1,\"sortingType\":\"ByPopularity\",\"offset\":{offset},\"limit\":24,\"updateFilters\":true}"
+	}
+}
