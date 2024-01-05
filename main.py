@@ -49,8 +49,8 @@ async def main():
     async with aiohttp.ClientSession() as session:
         store = await get_store(
             session,
-            input("[INPUT] Введите адрес или слово, входящее в него (пр. Вербная): "),
-            input("[INPUT] Введите город или слово, входящее в него (пр. Петербург): "),
+            input("[INPUT] Введите город или слово, входящее в него (напр. Петербург): ").capitalize(),
+            input("[INPUT] Введите адрес или слово, входящее в него (напр. Вербная): ").capitalize()
         )
         if not store:
             logging.error(msg="Неверно введен адрес или город")

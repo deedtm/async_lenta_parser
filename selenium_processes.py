@@ -12,7 +12,7 @@ options.add_argument("--headless")
 
 
 def get_driver(store_id: str, city_key: str):
-    driver = webdriver.Firefox(options=options)
+    driver = webdriver.Firefox(options=options, service=webdriver.FirefoxService(r'geckodriver\geckodriver.exe'))
     driver.get('https://lenta.com')
 
     with open("request_data.json", "r") as f:
@@ -37,7 +37,7 @@ def close_driver(driver: webdriver.Firefox):
 
 def get_stock(url: str, driver: webdriver.Firefox):
     driver.get(url)
-    info(msg=url[17:])
-    time.sleep(1)
+    info(msg=url)
+    time.sleep(1.1)
     return get_stock_value(driver.page_source)
 

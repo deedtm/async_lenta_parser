@@ -16,7 +16,7 @@ with open("request_data.json", "r") as f:
 SECONDS = 150
 
 
-async def get_store(session: ClientSession, address: str, city_name: str):
+async def get_store(session: ClientSession, city_name: str, address: str):
     async with session.get(url=stores["url"], headers=headers) as res:
         if res.status == 433:
             warning(msg=f"Слишком частые запросы. Повтор попытки через {SECONDS} сек.")
