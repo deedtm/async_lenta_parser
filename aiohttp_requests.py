@@ -1,9 +1,8 @@
 from asyncio import sleep
 import sys
-from aiohttp import ClientSession, ContentTypeError
+from aiohttp import ClientSession
 from logging import info, warning
 import json
-import fake_useragent
 
 
 with open("request_data.json", "r") as f:
@@ -40,7 +39,6 @@ async def get_products(
     cookies["Store"] = store_id
     cookies["CityCookie"] = str(city_key)
     cookies["CitySubDomainCookie"] = str(city_key)
-    headers["User-Agent"] = fake_useragent.UserAgent().random
     offset = 0 if offset == -1 else offset
     payload = skus["data"].replace("{offset}", str(offset)).replace("{node_code}", node_code)
 

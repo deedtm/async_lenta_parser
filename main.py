@@ -92,5 +92,8 @@ if __name__ == "__main__":
         format="%(asctime)s [%(levelname)s] %(filename)s:%(funcName)s: %(message)s",
         datefmt="%H:%M:%S",
     )
-    asyncio.run(main())
-    input('[FINAL] Парсинг завершился. Нажмите Enter, чтобы выйти.')
+    try:
+        asyncio.run(main())
+    finally:
+        print()
+        input('[FINAL] Нажмите Enter, чтобы выйти.')

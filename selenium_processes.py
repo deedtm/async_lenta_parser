@@ -2,12 +2,10 @@ import json
 from logging import info
 import time
 from selenium import webdriver
-from multiprocessing import Pool
 from bs_parse import get_stock_value
-from fake_useragent import UserAgent
 
 options = webdriver.FirefoxOptions()
-options.set_preference("general.useragent.override", UserAgent().random)
+options.set_preference("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0")
 options.add_argument("--headless")
 
 
